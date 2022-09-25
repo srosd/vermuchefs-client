@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Host, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Host } from '../models/host.model';
 
 const baseUrl = 'http://localhost:3000/hosts';
 

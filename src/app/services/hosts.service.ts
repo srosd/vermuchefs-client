@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HostsApi } from '../api/hosts.api';
+import { Host } from '../models/host.model';
 
 const baseUrl = 'https://localhost:3000';
 
@@ -14,7 +14,7 @@ export class HostsService {
     private hostApi: HostsApi 
     ) {}
 
-  getAllHosts(): Observable<any> {
+  getAllHosts$(): Observable<Host[]> {
     return this.hostApi.getHosts();
   }
 
